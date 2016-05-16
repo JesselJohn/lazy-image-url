@@ -47,13 +47,13 @@
                                 eachElem.elem.attr(
                                     'src',
                                     eachElem.url
-                                ).addClass('llu-img-loaded');
+                                ).animate({ 'opacity': 1 }, 300);
                             } :
                             function() {
                                 eachElem.elem.css(
                                     'background-image',
                                     'url(' + eachElem.url + ')'
-                                ).addClass('llu-img-loaded');
+                                ).animate({ 'opacity': 1 }, 300);
                             };
                     }(eachBlock[i]);
                 }
