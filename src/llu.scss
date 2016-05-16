@@ -5,9 +5,6 @@
     transition: 1s ease opacity;
     will-change: opacity;
     background-size: cover;
-    &.llu-img-loaded {
-        opacity: 1;
-    }
 }
 
 img.llu-smooth-img-load {
