@@ -41,19 +41,18 @@
                     var img = document.createElement('img');
                     img.src = eachBlock[i].url;
                     img.onload = function(eachElem) {
-                        console.log(eachElem.elem[0].nodeName)
                         return eachElem.elem[0].nodeName.toLowerCase() == "img" ?
                             function() {
                                 eachElem.elem.attr(
                                     'src',
                                     eachElem.url
-                                ).animate({ 'opacity': 1 }, 300);
+                                ).addClass('llu-img-loaded');
                             } :
                             function() {
                                 eachElem.elem.css(
                                     'background-image',
                                     'url(' + eachElem.url + ')'
-                                ).animate({ 'opacity': 1 }, 300);
+                                ).addClass('llu-img-loaded');
                             };
                     }(eachBlock[i]);
                 }
